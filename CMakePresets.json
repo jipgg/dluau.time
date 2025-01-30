@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": false,
+            "generator": "Visual Studio 17",
+            "binaryDir": "${sourceDir}/cmake",
+            "cacheVariables": {
+                "CMAKE_RUNTIME_OUTPUT_DIRECTORY": "${sourceDir}/bin",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows-static"
+            }
+        },
+        {
+            "name": "clangd",
+            "inherits": "default",
+            "hidden": false,
+            "generator": "Ninja",
+            "description": "Clangd configuration for exporting compile commands for MSVC",
+            "binaryDir": "${sourceDir}/clangd"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "module",
+            "configurePreset": "default",
+            "targets": ["time"]
+        }
+  ]
+}
