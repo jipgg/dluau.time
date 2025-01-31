@@ -70,7 +70,7 @@ static int new_ratio(lua_State* L) {
     return 1;
 }
 
-DLUAU_TIME_API inline int lua_initmodule(lua_State* L) {
+DLUAU_TIME_API inline int dlmodule_require(lua_State* L) {
     const luaL_Reg lib[] = {
         {"now", time_now},
         {"utc_now", utc_now},

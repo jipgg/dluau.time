@@ -187,4 +187,4 @@ export type time = {
     --- @return span A duration object representing the given hours.
     hours: (h: number) -> span,
 }
-return dlimport.initmodule("time") :: time 
+return dlimport.require("time") :: time 
