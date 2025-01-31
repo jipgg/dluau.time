@@ -1,6 +1,5 @@
 #pragma once
 #include <chrono>
-#include <dluau.h>
 #include <format>
 #include "type.hpp"
 using namespace std::chrono;

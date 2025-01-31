@@ -17,7 +17,7 @@ add_library(time SHARED ${lib_SRC})
 target_compile_definitions(time PRIVATE ${lib_EXPORT})
 target_include_directories(time PRIVATE include)
 set_target_properties(time PROPERTIES OUTPUT_NAME time)
-target_link_libraries(time PRIVATE dluaulib_stub Boost::container)
+target_link_libraries(time PRIVATE dluaulib-stub Boost::container)
 add_custom_command(TARGET time POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy
     "${require_DIR}/init.luau"

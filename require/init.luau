@@ -187,4 +187,4 @@ export type time = {
     --- @return span A duration object representing the given hours.
     hours: (h: number) -> span,
 }
-return dlimport.load(script.directory.."/time.dll"):lua_pushcfunction("loadtime")() :: time 
+return dlimport.initmodule("time") :: time 
